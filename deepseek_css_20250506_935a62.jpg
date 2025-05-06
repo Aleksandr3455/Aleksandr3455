@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f3f4f5;
+    color: #202020;
+}
+
+.container {
+    padding: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.app-header h1 {
+    color: #0088cc;
+    font-size: 24px;
+    margin: 0;
+}
+
+.balance-section {
+    margin-bottom: 24px;
+}
+
+.balance-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.balance-label {
+    display: block;
+    color: #606060;
+    margin-bottom: 8px;
+}
+
+.balance-amount {
+    font-size: 32px;
+    font-weight: 700;
+    color: #202020;
+}
+
+.referral-section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.referral-section h2 {
+    font-size: 18px;
+    margin: 0 0 16px 0;
+}
+
+.referral-stats {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    color: #0088cc;
+}
+
+.stat-label {
+    color: #606060;
+    font-size: 14px;
+}
+
+.tg-button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: opacity 0.2s;
+}
+
+.tg-button.primary {
+    background: #0088cc;
+    color: white;
+}
+
+.tg-button.success {
+    background: #00a884;
+    color: white;
+}
+
+.tg-button:active {
+    opacity: 0.8;
+}

@@ -1,0 +1,36 @@
+Telegram.WebApp.ready();
+
+// Инициализация данных
+let userData = {
+    balance: 150.50,
+    referrals: 5,
+    referralEarnings: 42.75,
+    availableWithdraw: 85.00
+};
+
+function updateUI() {
+    document.getElementById('balance').textContent = `$${userData.balance.toFixed(2)}`;
+    document.getElementById('referral-count').textContent = userData.referrals;
+    document.getElementById('referral-earnings').textContent = `$${userData.referralEarnings.toFixed(2)}`;
+    document.getElementById('available-amount').textContent = `$${userData.availableWithdraw.toFixed(2)}`;
+}
+
+// Обработчики кнопок
+document.getElementById('topup-btn').addEventListener('click', () => {
+    Telegram.WebApp.openInvoice(
+        { invoice_id: 'YOUR_INVOICE_ID' },
+        (status) => {
+            if (status === 'paid') {
+                // Обновление баланса после успешной оплаты
+            }
+        }
+    );
+});
+
+document.getElementById('withdraw-btn').addEventListener('click', () => {
+    Telegram.WebApp.showAlert(`Запрошена выплата $${userData.availableWithdraw.toFixed(2)}`);
+    // Здесь должна быть логика вывода средств
+});
+
+// Инициализация при загрузке
+updateUI();
